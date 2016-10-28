@@ -45,6 +45,6 @@ app.post('/searchmapdirection', function(req, res){
 });
 
 
-app.listen('3000', function(req, res){
-	console.log("Server started at PORT 3000");
+app.listen(process.env.PORT, function(req, res){
+	console.log("Server started");
 });
