@@ -7,6 +7,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 
 
 var foundMap = '';
+var theMethod ='';
 
 var firstD = '';
 var secondD = '';
@@ -27,7 +28,8 @@ app.get('/searchmap', function(req, res){
 app.get('/searchmapdirection', function(req, res){
 	res.render('searchmapDirection.ejs', {
 		firstD: firstD,
-		secondD: secondD
+		secondD: secondD,
+		theMethod: theMethod
 	});
 });
 
@@ -41,10 +43,11 @@ app.post('/searchmap', function(req, res){
 app.post('/searchmapdirection', function(req, res){
 	firstD = req.body.searchmapfrom;
 	secondD = req.body.searchmapto;
+	theMethod = req.body.themethod;
 	res.redirect('/searchmapdirection')
 });
 
 
-app.listen(process.env.PORT, function(req, res){
+app.listen('3000', function(req, res){
 	console.log("Server started");
 });
