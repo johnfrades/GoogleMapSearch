@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Sample map</title>
+
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+
+<h1>Use NodeJS Suyanee!</h1>
+
+
+
+<div class="container text-center">
+	<h1>Search Place</h1>
+	<form action="/searchmap" method=POST>
+
+	<label>Search</label>
+	<input type="text" name="searchmap">
+	<button>Submit</button>
+		
+	</form>
+
+	<h1>/</h1>
+
+	<h1>Search Direction</h1>
+	<form action="/searchmapdirection" method=POST>
+
+	<label>From:</label>
+	<input type="text" name="searchmapfrom">
+		
+	<label>To:</label>
+	<input type="text" name="searchmapto">
+
+	<button>Submit</button>
+	</form>
+</div>
+
+
+
+</body>
+</html>
